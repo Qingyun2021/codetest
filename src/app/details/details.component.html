@@ -1,0 +1,25 @@
+<button class="btn btn-success" 
+        style="margin-left: 20px;"
+        (click)="onGoBack()">&lt; Go Back</button>
+<br>
+<br>
+@if(entityDetails){
+  <h1>{{ entityDetails.labels.en.value }}</h1>
+  @if(entityDetails.descriptions){
+    <strong>Description:</strong> {{ entityDetails.descriptions.en?.value || 'No description available' }}
+  }
+  @if(entityDetails.claims){
+    <h2>Properties</h2>
+    <ul>
+      <li *ngFor="let property of getProperties()">
+        <strong>{{ property.name }}:</strong> {{ property.value }}
+      </li>
+    </ul>   
+  }
+}
+
+@else {
+  <p>Loading details...</p>
+}
+
+  

@@ -1,0 +1,14 @@
+<div>
+    <h1>Wikidata Search</h1>
+    <input [(ngModel)]="searchQuery" placeholder="Enter search term" />
+    <button class="btn btn-success"
+            style="margin: 5px;" 
+           (click)="onSearch()">Search</button>
+  
+    <ul>
+      <li *ngFor="let result of searchResults">
+        {{ result.label }} ({{ result.description }})
+        <button (click)="viewDetails(result.id)">View Details</button>
+      </li>
+    </ul>
+  </div>
