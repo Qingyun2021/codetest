@@ -1,4 +1,10 @@
 # how to set up
+## what you have:
+after clone from github, you have
+1: fback, this is for back end
+2: src, this is for front end
+3: package.json: this is for looking up angular version, can ignore it.
+
 ## Frontend
 download Angular, Node.js
 then use command: 
